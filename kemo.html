@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لي بنوتي</title>
+    <style>
+        :root {
+            --bg-color: #0d0202;
+            --card-red: #2a0505;
+            --primary-red: #ff3333;
+            --text-white: #fce4e4;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; overflow-x: hidden;
+        }
+
+        .hidden { display: none !important; }
+
+        .btn {
+            background: linear-gradient(45deg, var(--primary-red), #ff1a1a);
+            color: white; border: none; padding: 14px 40px;
+            border-radius: 30px; font-weight: bold; cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 51, 51, 0.4); transition: 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); }
+
+        .login-card {
+            background-color: var(--card-red); width: 320px;
+            padding: 40px; border-radius: 40px; text-align: center;
+            border: 1px solid #4a0a0a;
+        }
+
+        .input-field {
+            width: 90%; padding: 15px; margin: 20px 0;
+            background: rgba(0,0,0,0.3); border: 1px solid #5e1111;
+            border-radius: 25px; color: white; text-align: center;
+        }
+
+        .dashed-box {
+            border: 2px dashed var(--primary-red);
+            padding: 30px; border-radius: 30px; line-height: 1.8;
+            background: rgba(42, 5, 5, 0.4); margin-top: 20px;
+        }
+
+        .memories-container {
+            width: 350px; border: 2px solid var(--primary-red);
+            border-radius: 40px; padding: 20px; text-align: center;
+            background: var(--bg-color); animation: slideUp 1s;
+        }
+
+        video { 
+            border: 2px solid var(--primary-red); border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .image-slider {
+            width: 100%; height: 250px; border: 2px solid var(--primary-red);
+            border-radius: 20px; overflow: hidden; position: relative;
+            background: #000;
+        }
+        
+        .slider-wrapper {
+            display: flex; width: 100%; height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-wrapper img {
+            min-width: 100%; height: 100%; object-fit: cover;
+        }
+
+        .caption {
+            position: absolute; bottom: 0; width: 100%;
+            background: rgba(177, 3, 3, 0.75); color: white;
+            padding: 10px 0; font-size: 14px; z-index: 5;
+            font-weight: bold;
+        }
+
+        .nav-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255, 51, 51, 0.5); border: none;
+            color: white; font-size: 20px; padding: 10px;
+            cursor: pointer; border-radius: 50%; z-index: 10;
+        }
+        .nav-btn:hover { background: var(--primary-red); }
+        .prev { left: 5px; }
+        .next { right: 5px; }
+
+        .counter-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 10px; margin: 20px 0;
+        }
+        .counter-item {
+            border: 1px solid var(--primary-red);
+            padding: 10px 5px; border-radius: 10px;
+        }
+        .counter-item span { display: block; font-weight: bold; font-size: 18px; }
+        .counter-item small { font-size: 10px; color: #b10e0e; }
+
+        .glow-text {
+            font-family: 'Segoe UI', cursive; font-style: italic; font-weight: bold; 
+            color: #ff3333; text-shadow: 0 0 10px #a80303, 0 0 20px #ff4d4d;
+            text-align: center; font-size: 24px;
+        }
+
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div id="step1" class="login-card">
+        <span style="color: var(--primary-red); font-size: 13px;">اكتبي تاريخ ميلادي (الشهر/اليوم)</span>
+        <h1 style="font-size: 50px; margin: 10px;">💖</h1>
+        <h2 style="color: var(--primary-red); font-style: italic;">i love you</h2>
+        <input type="text" id="pass" class="input-field" placeholder="اكتبي الباسورد يقلبي 💓">
+        <button class="btn" onclick="showStep2()">دوسي هنا يا يبنوتي ←</button>
+    </div>
+
+    <div id="step2" class="hidden" style="text-align: center; max-width: 450px;">
+        <h1 style="font-style: italic;">💕 i love you 💕</h1>
+        <h2 style="font-size: 28px;">حقك عليا ينور عيني</h2>
+        <div class="dashed-box"><p>💞 حقك عليا انا عارف اني مقصر معاكي بقالي كذا يوم</p>
+            <p>💗 بس انا اسف يحياتي وحقك عليا كمان مره</p>
+            <p>💖 يا أجمل حاجة حصلتلي في الدنيا دي</p>
+            <p>💫 من أول يوم شوفتك فيه وأنا حبيتك من كل قلبي</p>
+           <p>😘💓 انتي ربنا عوضني بيكي يا اجمل بنوته في حياتي </p> 
+<P> 🫂 ربنا يخليكي ليا وميحرمنيش منك ابدا </P> 
+<p> ✨ وتفضلي جمبي علي طول يحياتي</p>
+        <p> 💍🫀 بقلنا 6 شهور مع بعض وهما احسن 6 شهور في حياتي كلها</p>
+ <P> 💞🫂 اول رمضان يعدي علينا ونكون مع بعض وديما نكون مع بعض وتفضلي في حضني علي طول يقلب ابوكي</P>
+            <p>💝 I love you</p>
+            <button class="btn" onclick="showStep3()">بحبك 💖</button>
+        </div>
+    </div>
+
+    <div id="step3" class="hidden">
+        <div class="memories-container">
+            <p class="glow-text">🥰 I Love you 💓</p>
+            
+            <video controls width="300" poster="./1/love.jpg">
+                <source src="./video/Download.mp4" type="video/mp4">
+            </video>
+            <br><br>
+            
+            <div class="image-slider">
+                <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <img src="./2/love 5.jpg" alt="1">
+                    <img src="./2/love 4.jpg" alt="2">
+                    <img src="./2/love 6.jpg" alt="3">
+                    <img src="./2/love 3.jpg" alt="4">
+                    <img src="./2/love 2.jpg" alt="5">
+                    <img src="./2/love 1.jpg" alt="6">
+                </div>
+                <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+                <div class="caption" id="captionText">متزعلي مني لو زعلتك في يوم من الايام✨</div>
+            </div>
+
+            <div class="counter-grid">
+                <div class="counter-item"><span id="days">140</span><small>يوم</small></div>
+                <div class="counter-item"><span id="hours">0</span><small>ساعة</small></div>
+                <div class="counter-item"><span id="mins">0</span><small>دقيقة</small></div>
+                <div class="counter-item"><span id="secs">0</span><small>ثانية</small></div>
+            </div>
+
+            <p class="glow-text" style="font-size: 20px;">💕 سوا من 140 يوم 💕</p>
+            
+        </div>
+    </div>
+
+    <script>
+        const slideMessages = [
+            "متزعلي مني لو زعلتك في يوم من الايام✨", 
+            "انتي أغلى حاجة عندي في الدنيا ❤️", 
+            "كل لحظة معاكي هي أجمل ذكرى 📸", 
+            "مش متخيل حياتي من غيرك يا روحي 💖", 
+            "ضحكتك هي اللي بتهون عليا كل حاجة 😍", 
+            "بحبك وهفضل أحبك لآخر العمر 💍"
+        ];
+
+        let currentIdx = 0;
+        const wrapper = document.getElementById('sliderWrapper');
+        const captionText = document.getElementById('captionText');
+        const totalImages = 6;
+
+        function changeSlide(direction) {
+            currentIdx += direction;
+            if (currentIdx >= totalImages) currentIdx = 0;
+            if (currentIdx < 0) currentIdx = totalImages - 1;
+            wrapper.style.transform = `translateX(${currentIdx * 100}%)`;
+            captionText.innerText = slideMessages[currentIdx];
+        }
+
+        function showStep2() {
+            if(document.getElementById('pass').value === "3/29") {
+                document.getElementById('step1').classList.add('hidden');
+                document.getElementById('step2').classList.remove('hidden');
+            } else { alert("الباسورد غلط يا قلبي 🙊"); }
+        }
+
+        function showStep3() {
+            document.getElementById('step2').classList.add('hidden');
+            document.getElementById('step3').classList.remove('hidden');
+            startCounter();
+        }
+
+        function startCounter() {
+            // التعديل هنا: نقوم بحساب تاريخ البداية ليكون قبل 140 يوم بالضبط من اللحظة الحالية
+            const msIn140Days = 140 * 24 * 60 * 60 * 1000;
+            const startDate = new Date().getTime() - msIn140Days;
+
+            setInterval(() => {
+                const now = new Date().getTime();
+                const diff = now - startDate;
+                
+                document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('mins').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('secs').innerText = Math.floor((diff % (1000 * 60)) / 1000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
